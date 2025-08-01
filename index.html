@@ -1,41 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Coinbase</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://www.coinbase.com/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coinbase Clone — Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Coinbase.svg" alt="Coinbase Logo" class="logo">
-    <span class="brand">Coinbase</span>
-  </header>
+  <div class="login-container">
+    <h1>Coinbase</h1>
+    <form id="loginForm">
+      <label for="email">Email address</label>
+      <input type="email" id="email" placeholder="you@example.com" required />
 
-  <main class="dashboard">
-    <h1>Portfolio</h1>
-    <div class="balance-card">
-      <p>Total Balance</p>
-      <h2>$69,420.00</h2>
-    </div>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter password" required minlength="6" />
 
-    <div class="asset-list">
-      <div class="asset">
-        <span class="asset-name">Bitcoin</span>
-        <span class="asset-price">$133,337.00</span>
-        <span class="asset-change positive">+420%</span>
-      </div>
-      <div class="asset">
-        <span class="asset-name">Ethereum</span>
-        <span class="asset-price">$4,200.69</span>
-        <span class="asset-change positive">+69%</span>
-      </div>
-      <div class="asset">
-        <span class="asset-name">Dogecoin</span>
-        <span class="asset-price">$0.420</span>
-        <span class="asset-change negative">-0.01%</span>
-      </div>
-    </div>
-  </main>
+      <button type="submit">Sign In</button>
+      <p id="loginError" class="error-msg"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
